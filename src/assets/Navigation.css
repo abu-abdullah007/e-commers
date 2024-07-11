@@ -1,0 +1,237 @@
+.nav-bar{
+    width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    box-shadow: 0 0 5px grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo{
+    height: 100%;
+    width: 100%;
+    flex: 0.2;
+    margin-left: 20px;
+}
+
+.logo img{
+    width: 60%;
+    max-width: 40px;
+    border-radius: 50%;
+    outline-offset: 4px;
+    outline-color: rgba(0, 0, 255, 0.664);
+    outline-style: groove;
+    outline-width: 3px;
+    cursor: pointer;
+}
+
+.nav-link{
+    flex: 0.4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 503px;
+    max-width: 503px;
+}
+
+.nav-link a{
+    text-decoration: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: rgb(36, 46, 36);
+    line-height: 60px;
+    width: 70px;
+    text-align: center;
+}
+
+.nav-link a.active{
+    border-bottom: 2px solid green;
+}
+
+.cart{
+    position: relative;
+    cursor: pointer;
+    flex: 0.1;
+}
+
+.cart i{
+    font-size: 1.4rem;
+    opacity: 0.8;
+}
+
+.cart span{
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 0.8rem;
+    background-color: red;
+    height: 17px;
+    width: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-family: sans-serif;
+    border: 2px solid white;
+    font-weight: bold;
+    display: none;
+}
+
+.hide{
+    height: 30px;
+    width: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.box{
+    height: 3px;
+    width: 60%;
+    background-color: green;
+}
+
+.main-footer{
+    height: 200px;
+    width: 100%;
+    background-color: rgb(39, 39, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-center{
+    height: 100%;
+    min-width: 1280px;
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#000000e5,#000000e5),url(footer-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-center-short{
+    height: 80%;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+    grid-gap: 10px;
+}
+
+.footer-boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-boxes a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.footer-boxes a:hover{
+    text-decoration: underline;
+}
+
+.last-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.last-box i{
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.last-box i:hover{
+    color: #008000a6;
+}
+
+@media screen and (max-width:600px) {
+    .hide{
+        display: flex;
+    }
+
+    .nav-link a{
+        display: none;
+    }
+
+    .nav-link{
+        max-width: 50px;
+        min-width: 50px;
+    }
+}
+
+@media screen and (max-width:1170px) {
+    .footer-center{
+        min-width: 1170px;
+        max-width: 1170px;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .footer-center{
+        min-width: 1080px;
+        max-width: 1080px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .footer-center{
+        min-width: 990px;
+        max-width: 990px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .footer-center{
+        min-width: 900px;
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .footer-center{
+        min-width: 840px;
+        max-width: 840px;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .footer-center-short{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 40px;
+    }
+
+    .footer-center{
+        min-height: 400px;
+        min-width: 100vw;
+    }
+}
+
+@media screen and (max-width:477px) {
+    .last-box i{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .last-box i{
+        font-size: 1.3rem;
+    }
+}
