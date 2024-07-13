@@ -74,10 +74,10 @@ body,html #root{
     position: absolute;
     top: -10px;
     left: 15px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     background-color: red;
-    height: 17px;
-    width: 17px;
+    height: 13px;
+    width: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,8 +85,9 @@ body,html #root{
     font-family: sans-serif;
     border: 2px solid white;
     font-weight: bold;
-    display: none;
+    color: white;
 }
+
 
 .hide{
     height: 30px;

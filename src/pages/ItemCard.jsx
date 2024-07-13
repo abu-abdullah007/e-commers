@@ -12,8 +12,8 @@ const ItemCard = (props) => {
                     <h3>{props.itemName}</h3>
                     <h4>{props.itemValue}</h4>
                     <div className="button-div">
-                        <button>Add To Cart</button>
-                        <button>Add To Wishlist</button>
+                        <button id='cartButton'>Add To Cart</button>
+                        <button id='wishButton'>Add To Wishlist</button>
                     </div>
                 </div>
             </div>

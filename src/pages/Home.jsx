@@ -11,8 +11,10 @@ import mug from '../assets/item-pic/mug.jpg'
 import router from '../assets/item-pic/router.jpg'
 import poster from '../assets/item-pic/shoping.png'
 import Footer from './Footer';
+import PropTypes from 'prop-types'
 
-const Home = () => {
+
+const Home = (props) => {
     return (
         <>
             <div className="main-section">
@@ -40,6 +42,10 @@ const Home = () => {
             <Footer/>
         </>
     );
+}
+
+Home.propTypes = {
+    setColor:PropTypes.string.isRequired
 }
  
 export default Home;

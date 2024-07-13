@@ -1,4 +1,5 @@
 import { Outlet, NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import '../assets/Navigation.css'
 import logo from '../assets/shop-logo.png'
 import { useEffect } from 'react'
@@ -58,6 +59,10 @@ const Navigation = (props) => {
             <Outlet/>
         </>
     );
+}
+
+Navigation.propTypes = {
+    cartCount:PropTypes.string.isRequired
 }
  
 export default Navigation;
