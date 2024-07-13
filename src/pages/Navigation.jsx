@@ -1,8 +1,23 @@
 import { Outlet, NavLink } from 'react-router-dom'
 import '../assets/Navigation.css'
 import logo from '../assets/shop-logo.png'
+import { useEffect } from 'react'
 
 const Navigation = (props) => {
+    useEffect(()=>{
+        const crossButton = document.querySelector('#crossButton')
+        const addButton = document.querySelector('.hide')
+        const hiddenNav = document.querySelector('.hidden-nav-bar')
+
+        addButton.addEventListener("click",()=>{
+            hiddenNav.classList.add('side-go')
+        })
+
+        crossButton.addEventListener("click",()=>{
+            hiddenNav.classList.remove('side-go')
+        })
+    })
+
     return (
         <>
             <nav className="nav-bar">
@@ -24,36 +39,23 @@ const Navigation = (props) => {
                     <div className="box"></div>
                 </div>
             </nav>
-            <Outlet/>
-            <footer className='main-footer'>
-                <div className="footer-center">
-                    <div className="footer-center-short">
-                        <div className="footer-boxes">
-                            <NavLink to="/about-us">about-Us</NavLink>
-                            <NavLink to="/contact-us">contact-Us</NavLink>
-                            <NavLink to="/sign-Up">sign-Up</NavLink>
-                            <NavLink to="/login">login</NavLink>
-                            <NavLink to="/tracking-product">tracking-product</NavLink>
-                            <NavLink to="/saler">Sale In Our Site</NavLink>
-                        </div>
-                        <div className="footer-boxes">
-                            <NavLink to="/review">review</NavLink>
-                            <NavLink to="/product-rating">rating</NavLink>
-                            <NavLink to="/partners">partners</NavLink>
-                            <NavLink to="/cupon">cupon-form</NavLink>
-                            <NavLink to="membership">membership-form</NavLink>
-                        </div>
-                        <div className="footer-boxes last-box">
-                            <i className="fa-brands fa-twitter"></i>
-                            <i className="fa-brands fa-facebook"></i>
-                            <i className="fa-brands fa-google"></i>
-                            <i className="fa-brands fa-dribbble"></i>
-                            <i className="fa-brands fa-ebay"></i>
-                            <i className="fa-brands fa-amazon"></i>
-                        </div>
+            <div className="hidden-nav-bar">
+                <div className="hidden-center">
+                    <div className="btns">
+                        <button id='crossButton'>
+                            <i className="fa-solid fa-x"></i>
+                        </button>
+                    </div>
+                    <div className="hide-nav-list">
+                        <NavLink to="/">home</NavLink>
+                        <NavLink to="/cart">cart</NavLink>
+                        <NavLink to="/product">product</NavLink>
+                        <NavLink to="/login">login</NavLink>
+                        <NavLink to="/sign-up">sign up</NavLink>
                     </div>
                 </div>
-            </footer>
+            </div>
+            <Outlet/>
         </>
     );
 }
