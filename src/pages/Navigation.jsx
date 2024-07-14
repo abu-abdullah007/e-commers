@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import '../assets/Navigation.css'
 import logo from '../assets/shop-logo.png'
 import { useEffect } from 'react'
+import Footer from './Footer'
 
 const Navigation = (props) => {
     useEffect(()=>{
@@ -57,6 +58,7 @@ const Navigation = (props) => {
                 </div>
             </div>
             <Outlet/>
+            <Footer/>
         </>
     );
 }

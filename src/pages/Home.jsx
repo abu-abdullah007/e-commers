@@ -11,17 +11,17 @@ import mug from '../assets/item-pic/mug.jpg'
 import router from '../assets/item-pic/router.jpg'
 import poster from '../assets/item-pic/shoping.png'
 import Footer from './Footer';
-import PropTypes from 'prop-types'
 
 
-const Home = (props) => {
+const Home = () => {
+
     return (
         <>
             <div className="main-section">
                 <div className="section-cover">
                     <div className="cor">
                         <div className="cor-item">
-                            <img src={poster} alt="" />
+                            <img src={poster} alt="" id='poster'/>
                         </div>
                     </div>
                     <div className="item-box">
@@ -39,13 +39,9 @@ const Home = (props) => {
                     </div>
                 </div>
             </div>
-            <Footer/>
+            {/* <Footer/> */}
         </>
     );
-}
-
-Home.propTypes = {
-    setColor:PropTypes.string.isRequired
 }
  
 export default Home;
