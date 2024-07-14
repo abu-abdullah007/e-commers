@@ -1,4 +1,3 @@
-import Footer from "./Footer";
 import '../assets/Cart.css'
 import { useEffect } from "react";
 
