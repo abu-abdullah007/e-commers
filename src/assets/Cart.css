@@ -150,6 +150,7 @@
 @media screen and (max-width:770px) {
     .cart-center-div{
         flex-direction: column;
+        min-width: 95vw;
     }
 
     .cart-logo{
